@@ -59,9 +59,8 @@ Was möchte ich neu machen?
 
 **Alles!**
 
-Dieses Programm wurde geschrieben, um Schülern das Programmieren näher zu bringen. Das bringt natürlich mit sich, dass es weder performant, noch test-bar (Unit Tests), geschweige denn erweiterbar ist.
 
-Außerdem macht mich die API-Inkonsequenz verrückt:
+Die API-Inkonsequenz macht einen verrückt:
 
     public void drehe(int orientation)
 
