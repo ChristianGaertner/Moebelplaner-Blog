@@ -3,7 +3,7 @@ console.log('Booted.');
 var id = 'tag01';
 
 (function($) {
-
+    var MAIN_URL = 'https://api.github.com/repos/ChristianGaertner/Moebelplaner-Blog/contents/posts/';
     var methods = {
         init: function(options) {
             return this.each(function() {
@@ -16,7 +16,7 @@ var id = 'tag01';
 
                 $.ajax({
 
-                    url: 'https://api.github.com/repos/ChristianGaertner/Moebelplaner-Blog/contents/posts',
+                    url: MAIN_URL,
                     headers: {
                         'Accept': 'application/vnd.github.html'
                     },
@@ -27,6 +27,7 @@ var id = 'tag01';
                             console.log('No posts to look at...');
                             return $this.html('No posts to look at...');
                         }
+                        console.log('Found ' + data.length + ' post(s):');
                         for (var i = data.length - 1; i >= 0; i--) {
                             console.log(data[i].name);
                             $this.append('<li onmouseover="" style="cursor: pointer;" onClick="loadLog(this)" id="' + data[i].name + '">' + displayName(data[i].name) + '</li>');
@@ -41,9 +42,11 @@ var id = 'tag01';
                 function displayName(s) {
                     s = s.substring(0, 5);
                     s = s.replace(/([a-z])([0-9])/g, '$1 $2');
-                    s = s.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+                    s = s.replace(/\w\S*/g, function(s) {
+                        return s.charAt(0).toUpperCase() + s.substr(1).toLowerCase();
+                    });
                     return s;
-                };
+                }
 
 
             });
@@ -53,7 +56,7 @@ var id = 'tag01';
                 var $this = $(this);
                 $.ajax({
 
-                    url: 'https://api.github.com/repos/ChristianGaertner/Moebelplaner-Blog/contents/' + options.id,
+                    url: MAIN_URL + options.id,
                     headers: {
                         'Accept': 'application/vnd.github.html'
                     },
@@ -77,7 +80,7 @@ var id = 'tag01';
         } else if ( typeof method === 'object' || ! method ) {
           return methods.init.apply( this, arguments );
         } else {
-          // $.error( 'Method ' +  method + ' does not exist on jQuery.tooltip' );
+          $.error( 'Method ' +  method + ' does not exist on jQuery.tooltip' );
         }
     };
 
