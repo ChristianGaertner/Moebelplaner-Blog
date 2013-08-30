@@ -4,7 +4,7 @@ Moebleplaner-Blog
 Diese Repo wird alle "Blog-Posts" in Form einer Markdown-Datei enthalten.
 
 
-[Gehe zum Web-Blog](http://christiangaertner.github.io/Moebleplaner-Blog)
+[Gehe zum Web-Blog](http://christiangaertner.github.io/Moebelplaner-Blog/)
 
 
 
