@@ -4,9 +4,10 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/pygment_trac.css" media="screen" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/logprovider.js"></script>
 
     <title>Möbelplaner Blog by ChristianGaertner</title>
   </head>
@@ -19,8 +20,8 @@
         <h2>von Christian Gärtner</h2>
 
         <section id="downloads">
-          <a href="https://github.com/ChristianGaertner/Moebelplaner-Blog/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/ChristianGaertner/Moebelplaner-Blog/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/ChristianGaertner/Moebelplaner-Blog/zipball/master" class="btn">Download all posts as .zip</a>
+          <a href="https://github.com/ChristianGaertner/Moebelplaner-Blog/tarball/master" class="btn">Download all posts as .tar.gz</a>
           <a href="https://github.com/ChristianGaertner/Moebelplaner-Blog" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
       </div>
@@ -28,16 +29,24 @@
 
     <div class="container">
       <section id="main_content">
-        <h1>
-<a name="moebleplaner-blog" class="anchor" href="#moebleplaner-blog"><span class="octicon octicon-link"></span></a>Moebleplaner-Blog</h1>
 
 <h2>
 <a name="alle-posts" class="anchor" href="#alle-posts"><span class="octicon octicon-link"></span></a>Alle Posts</h2>
 
-<p><a href="https://github.com/ChristianGaertner/Moebelplaner-Blog/blob/master/tag01.md">Tag 01</a></p>
+	<ul id="post_list">
+		<li><a onClick="return false;" onmousedown="loadLog(this)" href="#">Tag 01</a></li>
+	</ul>
+	
+	<div id="post">
+		Click on a post to view it!
+	</div>
+
       </section>
     </div>
 
+    <script>
+    	$('#post_list').logprovider();
+    </script>
     
   </body>
 </html>
