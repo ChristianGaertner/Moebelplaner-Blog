@@ -1,7 +1,3 @@
-console.log('Booted.');
-
-var id = 'tag01';
-
 (function($) {
     var MAIN_URL = 'https://api.github.com/repos/ChristianGaertner/Moebelplaner-Blog/contents/posts/';
     var methods = {
@@ -40,7 +36,7 @@ var id = 'tag01';
                 });
 
                 function displayName(s) {
-                    s = s.substring(0, 5);
+                    s = s.substring(0, s.length - 3);
                     s = s.replace(/([a-z])([0-9])/g, '$1 $2');
                     s = s.replace(/\w\S*/g, function(s) {
                         return s.charAt(0).toUpperCase() + s.substr(1).toLowerCase();
@@ -74,7 +70,7 @@ var id = 'tag01';
         }
     };
 
-    $.fn.logprovider = function(method) {
+    $.fn.markdownprovider = function(method) {
         if (methods[method]) {
             return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
         } else if ( typeof method === 'object' || ! method ) {
@@ -84,13 +80,5 @@ var id = 'tag01';
         }
     };
 
-
+console.log('MarkDownProvider booted.');
 })(jQuery);
-
-
-function loadLog(li) {
-    var id = li.id.toLowerCase().replace(/\s+/g, '');
-    $('#post').logprovider('load', {
-        'id': id
-    });
-}

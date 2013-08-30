@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/pygment_trac.css" media="screen" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/logprovider.js"></script>
+    <script src="js/markdownprovider.js"></script>
 
     <title>Möbelplaner Blog by ChristianGaertner</title>
   </head>
@@ -45,7 +45,13 @@
     </div>
 
     <script>
-    	$('#post_list').logprovider();
+    	$('#post_list').markdownprovider();
+      function loadLog(li) {
+        var id = li.id.toLowerCase().replace(/\s+/g, '');
+        $('#post').markdownprovider('load', {
+            'id': id
+        });
+      }
     </script>
     
   </body>
