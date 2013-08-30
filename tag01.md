@@ -58,17 +58,17 @@ Was möchte ich neu machen?
 
 **Alles!**
 
-Dieses Programm wurde geschrieben, um Schülern das Programmieren näher zu bringen. Das bringt natürlich mit sich, dass es weder performant, noch test-bar (Unit Tests), geschweige denn Erweiterbar ist.
+Dieses Programm wurde geschrieben, um Schülern das Programmieren näher zu bringen. Das bringt natürlich mit sich, dass es weder performant, noch test-bar (Unit Tests), geschweige denn erweiterbar ist.
 
-Außerdem macht mich die API Inkonsequenz verrückt:
+Außerdem macht mich die API-Inkonsequenz verrückt:
 
     public void drehe(int orientation)
 
-Setzt (```=```) den Wert, während
+Setzt (```=```) den Wert (aka. *absolut*), während
 
     public void bewege(int entfernung)
 
-ihn verändernt (```+=```).
+ihn verändernt (```+=```) (aka. *relativ*).
 
 
 #### Wie soll das neue Setup nun aussehen?
@@ -92,3 +92,5 @@ Das ganze jetzt nur als groben Plan, aber ich möchte mit Sicherheit mehr Abstra
           xPosition += entfernung;
           zeige();
      }
+     
+und wie gesagt durch das aufrufen einer ```update()``` Methode vereinfachen. Mehr dazu aber später.
