@@ -9,7 +9,7 @@ Die Datein sind nach dem jeweiligen Tag des Unterrichts benannt:
      tag02.md
      tag03.md
 
-Außerdem enthält jede Datei das Datum des Unterrichts (als Kommentar):
+Außerdem enthält jede Datei das Datum des "Arbeitstages" (als Kommentar):
 
      <!-- 29.08.2013 -->
 
