@@ -31,10 +31,10 @@ Dies ist selbsverständlich eine äußert einfache Aufgabe und kann in wenigen S
     }
 
 
-Um das ganze noch einfacher zu gestalten werde ich ein paar overloading Konstruktore erstellen:
+Um das ganze noch einfacher zu gestalten werde ich den Konstruktor überladen:
 
     public Stuhl(int x, int y) {
-        this(x, y, "blau", 0);
+        this(x, y, "blau");
     }
 
     public Stuhl(int x, int y, String farbe) {
@@ -42,7 +42,7 @@ Um das ganze noch einfacher zu gestalten werde ich ein paar overloading Konstruk
     }
     
     public Stuhl() {
-        this(0, 0, "blau", 0);
+        this(0, 0);
     }
 
 
