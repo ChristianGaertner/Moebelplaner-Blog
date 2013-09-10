@@ -10,16 +10,9 @@ Nachdem wir unsere `Stuhl` Klasse verbessert hatten, sollte nun ein neues Möbel
 Ein Schrank:
 
 Dieser sollte in etwa so aussehen:
-```
-   +------------------------------------+
-   |--                               -- |
-   |        --               --         |
-   |                -- --               |
-   |                -- --               |
-   |        --               --         |
-   |--                              --  |
-   +------------------------------------+
-```
+
+![Rechteck mit Kreuz in der Mitte](https://raw.github.com/ChristianGaertner/Moebelplaner-Blog/master/media/images/schrank.png "Schrank")
+
 
 #### Erreichen des Zieles
 
