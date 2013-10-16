@@ -33,7 +33,7 @@ In diesem Glossar werden Grundlegende Begriffe erklärt.
         // Diese Zeile ist ein Kommentar
         /*
         * Hier werden mehrere Zeilen auskommentiert
-        * (bis zum nächsten */)
+        * (bis zum nächsten:
         */
         
         /**
