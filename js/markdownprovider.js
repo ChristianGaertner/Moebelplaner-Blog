@@ -1,5 +1,6 @@
 (function($) {
-    var MAIN_URL = 'https://api.github.com/repos/ChristianGaertner/Moebelplaner-Blog/contents/posts/';
+    var MAIN_URL = 'https://api.github.com/repos/ChristianGaertner/Moebelplaner-Blog/contents/';
+    
     var methods = {
         init: function(options) {
             return this.each(function() {
@@ -12,7 +13,7 @@
 
                 $.ajax({
 
-                    url: MAIN_URL,
+                    url: MAIN_URL + 'posts',
                     headers: {
                         'Accept': 'application/vnd.github.html'
                     },
@@ -48,11 +49,19 @@
             });
         },
         load: function(options) {
+            var c_url = '';
+
+            if (options.type == null) {
+                c_url = MAIN_URL + 'posts/' + options.id;
+            } else {
+                c_url = MAIN_URL + options.type + '/' + options.id;
+            }
+
             return this.each(function() {
                 var $this = $(this);
                 $.ajax({
 
-                    url: MAIN_URL + options.id,
+                    url: c_url,
                     headers: {
                         'Accept': 'application/vnd.github.html'
                     },

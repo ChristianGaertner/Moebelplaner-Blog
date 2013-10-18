@@ -29,8 +29,12 @@
     <div class="container">
       <section id="main_content">
 
+
+
 <h2>
-<a name="alle-posts" class="anchor" href="#alle-posts"><span class="octicon octicon-link"></span></a>Alle Posts</h2>
+Alle Posts
+<button class="btn" style="cursor: pointer;" onClick="loadGlossar()">Glossar</button>
+</h2>
 
 	<ul id="post_list">
     <h3>JavaScript is disabled!</h3>
@@ -51,8 +55,15 @@
       function loadLog(li) {
         var id = li.id.toLowerCase().replace(/\s+/g, '');
         $('#post').markdownprovider('load', {
-            'id': id
+            id: id
         });
+      }
+
+      function loadGlossar() {
+        $('#post').markdownprovider('load', {
+          type: 'sites',
+          id: 'glossar.md'
+        })
       }
     </script>
     
