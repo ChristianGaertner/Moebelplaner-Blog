@@ -23,6 +23,24 @@ In diesem Glossar werden Grundlegende Begriffe erklärt.
 
     Methoden sind ein Teil einer [*Klasse*](#klasse). Sie führen Aktion durch und können die [*Variablen*](#variabel)
     des Objektes modifizieren. Sie können Parameter benötigen und Werte zurück geben.
+    Sie können eine von 3 verschiedenen Sichtbarkeits-Stufen haben:
+    ```
+    public
+    protected
+    private
+    ```
+    Hierbei sagt `public` aus, dass die Methode von überall aufgerufen werden kann.
+    `private` hingegen verbietet den externen Zugriff und nur die Klasse selber hat Zugriff dadrauf,
+    `protected` ist da sehr ähnlich, lässt jedoch Zugriff von Kind (child) Klassen zu.
+    
+    #### Sichtbarkeiten kann man sich so vorstellen:
+    
+    
+    Wenn du zu McDonald's gehst und einen BigMac bestellst, "rufst" du die Methode `getBigMac()` auf.
+    
+    Im Restaurant werden jetzt viele andere Methoden ausgeführt (wie z.B. `getSalad()` or even `killCow()`).
+    
+    All diese Operation musst du als Nutzer gar nicht kennen und solltest diese eigentlich auch nicht "stand-alone" ausführen.
 
 - ### Kommentar
 
@@ -58,3 +76,7 @@ In diesem Glossar werden Grundlegende Begriffe erklärt.
       private static int count;
       private static final int count;
   ```
+  Variablen dienen der Speicherung von Information in einem Objekt.
+  
+  Sie können wie [*Methoden*](#methoden) unterschiedliche
+  [*Sichtbarkeiten*](#sichtbarkeiten-kann-man-sich-so-vorstellen) haben.
