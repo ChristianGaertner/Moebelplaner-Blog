@@ -80,3 +80,42 @@ In diesem Glossar werden Grundlegende Begriffe erklärt.
   
   Sie können wie [*Methoden*](#methoden) unterschiedliche
   [*Sichtbarkeiten*](#sichtbarkeiten-kann-man-sich-so-vorstellen) haben.
+
+- ### Vererbung
+
+    Vererbung kann genutzt werden um eine *Is-a* Beziehung herzustellen. Die einfachste Art der Vererbung ist die
+    Erstellung einer Child-Class mittels des `extends` Schlüsselwortes, z. B.:
+    
+    ```java
+    public class Foo extends Bar
+    { }
+    ```
+    
+    In dem Beispiel erbt `Foo` alle Eigenschaften von `Bar` (außer `private`). Sollte `Bar` eine Methode `baz` haben,
+    so könnte man diese auch von `Foo` aufrufen.
+    
+    ```java
+    public class Bar
+    {
+        public void baz() {
+            // do-nothing
+        }
+    }
+    
+    public class Foo extends Bar
+    {
+        @Override
+        public void baz() {
+            this.child();
+        }
+        
+        protected void child() {
+            // do-nothing
+        }
+    }
+    ```
+    
+    In dem obigen Beispiel wird gezeigt, wie Methoden im *child* noch geändert werden können.
+    
+    Mittels der `@Override` Annotation.
+    
