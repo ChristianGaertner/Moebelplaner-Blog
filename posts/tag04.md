@@ -1,5 +1,5 @@
 <!-- 16.09.2013 -->
-Tag 3
+Tag 4
 ==========
 Schritte auf dem Weg zum *perfekten* Möbelplaner.
 
