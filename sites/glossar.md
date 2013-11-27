@@ -118,4 +118,26 @@ In diesem Glossar werden Grundlegende Begriffe erklärt.
     In dem obigen Beispiel wird gezeigt, wie Methoden im *child* noch geändert werden können.
     
     Mittels der `@Override` Annotation.
+
+- ### Beziehungen
+
+    Eine **Hat-Beziehung** ist eine Bezeichung von einer Relation zwischen, streng genommen, zwei Objekten.
+    In einer Komposition oder Zerlegung (die Hat-Beziehung) *besitzt* Objekt A Objekt B,
+    letzteres kann nicht ohne Objekt A existieren.
     
+    Beispiel:
+    
+    > Ein Blogpost **hat** mehrere Kommentare. Ein solches Kommentar kann ohne den Blogpost nicht existieren.
+    
+    Diese Art nennt man **Komposition**. Nun stellt sich die Frage wie es aussieht mit lockeren Beziehung.
+    Das Beispiel wäre hier:
+    
+    > Ein Blogpost hat ein Bild eingebunden. Das Bild kann auch ohne den Blogpost existieren.
+    
+    Eine solche Beziehung nennt man **Aggregation**.
+    
+    Neben der **Hat-Beziehung** existiert auch noch eine sogenannte **Kennt-Beziehung** (*Assoziation*).
+    
+    Das Beispiel hierzu wäre analog:
+    
+    > // Kommt noch!
