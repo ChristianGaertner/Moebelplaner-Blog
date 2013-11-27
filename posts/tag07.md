@@ -3,7 +3,9 @@ Tag 7
 ==========
 Schritte auf dem Weg zum *perfekten* Möbelplaner.
 
-Diesmal galt es erstmal UML Diagramme
+Diesmal galt es erstmal UML Diagramme von unserem Projekt zu erstellen.
+
+Dazu fällt mir erstmal dies ein:
 
 > How many Java developers does it take to change a lightbulb?
 > 
